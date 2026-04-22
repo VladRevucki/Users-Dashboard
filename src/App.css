@@ -1,0 +1,161 @@
+.app {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  max-width: 100%;
+  min-width: 250px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.sort-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sort-button {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.sort-button:hover {
+  border-color: #007bff;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 50px;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.user-card h3 {
+  margin: 0 0 12px 0;
+  color: #000000;
+}
+
+.user-card p {
+  margin: 5px 0;
+  color: #000000;
+}
+
+.user-card a {
+  color: #007bff;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.user-card a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sort-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sort-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
